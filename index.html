@@ -381,7 +381,7 @@ let sWords = s1Words.map(sword => sword.toLowerCase());
 
                 randWords = scrambleWords(newWords.split("")).join("");
 
-                if(randWords == guess.value)
+                if(randWords.toLowerCase() == guess.value.toLowerCase())
                 {
                     randWords = scrambleWords(randWords.split("")).join("");
                 }
@@ -399,7 +399,7 @@ let sWords = s1Words.map(sword => sword.toLowerCase());
             else
             {
                 let tempWord = guess.value;
-                if(tempWord == newWords)
+                if(tempWord.toLowerCase() == newWords.toLowerCase())
                 {
                     play = false;
                     msg.innerHTML = ` Great Job, the word  is ${newWords}`;
@@ -427,7 +427,7 @@ let sWords = s1Words.map(sword => sword.toLowerCase());
 
                 randWords = scrambleWords(newWords.split("")).join("");
 
-                if(randWords == guess.value)
+                if(randWords.toLowerCase() == guess.value.toLowerCase())
                 {
                     randWords = scrambleWords(newWords.split("")).join("");
                 }
@@ -445,7 +445,7 @@ let sWords = s1Words.map(sword => sword.toLowerCase());
             else
             {
                 let tempWord = guess.value;
-                if(tempWord == newWords)
+                if(tempWord.toLowerCase() == newWords.toLowerCase())
                 {
                     play = false;
                     msg.innerHTML = ` Great Job, the word  is ${newWords}`;
