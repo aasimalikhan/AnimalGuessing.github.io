@@ -385,7 +385,7 @@ let sWords = s1Words.map(sword => sword.toLowerCase());
                 {
                     randWords = scrambleWords(randWords.split("")).join("");
                 }
-                else
+                else if(randWords.toLowerCase() != guess.value.toLowerCase())
                 {
                     
                  
@@ -429,9 +429,9 @@ let sWords = s1Words.map(sword => sword.toLowerCase());
 
                 if(randWords.toLowerCase() == guess.value.toLowerCase())
                 {
-                    randWords = scrambleWords(newWords.split("")).join("");
+                    randWords = scrambleWords(randWords.split("")).join("");
                 }
-                else
+                else if(randWords.toLowerCase() != guess.value.toLowerCase())
                 {
                     msg.innerHTML = `Guess the word: ${randWords}`;
                     $('.msg').hide().fadeIn(500);
